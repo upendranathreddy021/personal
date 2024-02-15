@@ -1,9 +1,15 @@
 import React from 'react'
 import SidenavTitle from './SidenavTitle';
-import { Link } from 'react-router-dom';
+import { Link,Navigate, useNavigate } from 'react-router-dom';
 
 
 const Sidenav = () => {
+let Navigate=useNavigate()
+let giftfun=()=>{
+  Navigate("/gift")
+
+}
+
   return (
     <div className="px-7 py-4">
       <SidenavTitle title="M" subTitle="enu" />
@@ -30,6 +36,9 @@ const Sidenav = () => {
       <ul>
         <li className="sidenavLi">+91 9493 115 429</li>
         <li className="sidenavLi">upendrareddy021@gmail.com</li>
+
+        <Link to="/gift">  <li>Want to know my Fav Person</li></Link>
+
       </ul>
     </div>
   );
